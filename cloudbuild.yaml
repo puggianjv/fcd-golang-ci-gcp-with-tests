@@ -1,0 +1,10 @@
+steps:
+ - id: test
+   name: "gcr.io/cloud-builders/go"
+   args: ["test","./main"]
+   env: ["GOPATH=."]
+
+ - id: start
+   name: "gcr.io/cloud-builders/go"
+   args: ["run","./main/main.go"]
+   env: ["GOPATH=."]
